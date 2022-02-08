@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento OnSubmit</title>
+</head>
+<body>
+
+    <p>Cuando se le de a enviar el formulario alertará el texto que se haya escrito.</p>
+    
+    <form action="OnSubmitEvent.html" onsubmit="randomFunction()">
+      Dime algo: <input type="text" name="text" id="text">
+      <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+    function randomFunction() {
+        var txt = document.getElementById("text").value;
+        if(txt !=""){
+            alert("El texto escrito era: "+txt);
+        }else{
+        alert("¡El campo está vacío!");
+        }
+    }
+    </script>
+    
+    </body>
+    </html>
